@@ -1,0 +1,117 @@
+{% load static %}
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="" class="brand-link">
+        <img src="{% static 'dist/img/user2-160x160.jpg' %}" alt="Admin User" class="brand-image img-circle elevation-3"
+            style="opacity: .8">
+        <span class="brand-text font-weight-light mr-1">Oyindamola</span>
+        <span class="right badge badge-success">Admin</span>
+    </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+            {% url 'admin_dashboard' as admin_dashboard %}
+            <a href="{% url 'admin_dashboard' %}" class="nav-link {% if request.path == admin_dashboard %} active {% endif %}">
+                <i class="nav-icon fas fa-th"></i>
+                <p> Dashboard <span class="right badge badge-danger">New</span></p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'contact' as contact %}
+            <a href="{% url 'contact' %}" class="nav-link {% if request.path == contact %} active {% endif %}">
+                <i class="nav-icon fas fa-copy"></i>
+                <p> Contact <span class="right badge badge-warning">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'about' as about %}
+            <a href="{% url 'about' %}" class="nav-link {% if request.path == about %} active {% endif %}">
+                <i class="far fa-circle nav-icon"></i>
+                <p> About <span class="right badge badge-primary">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'lead_messages' as lead_messages %}
+            <a href="{% url 'lead_messages' %}" class="nav-link {% if request.path == lead_messages %} active {% endif %}">
+                <i class="far fa-envelope nav-icon"></i>
+                <p> Messages <span class="right badge badge-info">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'leads' as leads %}
+            <a href="{% url 'leads' %}" class="nav-link {% if request.path == leads %} active {% endif %}">
+                <i class="far fa-user nav-icon"></i>
+                <p> Leads <span class="right badge badge-secondary">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'view_list' as view_list %}
+            <a href="{% url 'view_list' %}" class="nav-link {% if request.path == view_list %} active {% endif %}">
+                <i class="far fa-user nav-icon"></i>
+                <p> List <span class="right badge badge-secondary">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'add_product' as add_product %}
+            <a href="{% url 'add_product' %}" class="nav-link {% if request.path == add_product %} active {% endif %}">
+                <i class="far fa-user nav-icon"></i>
+                <p> Add Product <span class="right badge badge-success">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'manage_products' as manage_products %}
+            <a href="{% url 'manage_products' %}" class="nav-link {% if request.path == manage_products %} active {% endif %}">
+              <i class="far fas fa-copy nav-icon"></i>
+              <p>Manage Products<span class="right badge badge-info">New</span></p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'add_blog' as add_blog %}
+            <a href="{% url 'add_blog' %}" class="nav-link {% if request.path == add_blog %} active {% endif %}">
+                <i class="far fa-user nav-icon"></i>
+                <p> Add Blog <span class="right badge badge-success">New</span> </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            {% url 'manage_blogs' as manage_blogs %}
+            <a href="{% url 'manage_blogs' %}" class="nav-link {% if request.path == manage_blogs %} active {% endif %}">
+              <i class="far fas fa-copy nav-icon"></i>
+              <p>Manage Blogs<span class="right badge badge-info">New</span></p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+          {% url 'blog_comments' as blog_comments %}
+          <a href="{% url 'blog_comments' %}" class="nav-link {% if request.path == blog_comments %} active {% endif %}">
+            <i class="far fas fa-copy nav-icon"></i>
+            <p>Blog Comments<span class="right badge badge-warning">New</span></p>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.s}idebar -->
+</aside>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+<!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->

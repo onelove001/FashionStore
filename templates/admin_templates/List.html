@@ -1,0 +1,46 @@
+{% extends 'admin_templates/base.html' %}
+
+{% block title %} List {% endblock %}
+
+
+{% block page_title %} My List {% endblock %}
+
+{% block content %}
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card card-solid">
+      <div class="card-body pb-0">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-12">
+            <div class="card bg-light">
+              <div class="card-body pt-0">
+                <ul class="ml-4 mb-0 fa-ul text-muted">
+                  {% for list in lists %}
+                  <li class="p"><span class="fa-li"><i class="fas fa-lg fa-user"></i></span>{{list.email}}</li>
+                  <hr />
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <nav aria-label="Contacts Page Navigation">
+          <ul class="pagination justify-content-center m-0">
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+
+</section>
+  <!-- /.content -->
+{% endblock content %}

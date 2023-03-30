@@ -1,0 +1,94 @@
+{% extends 'admin_templates/base.html' %}
+
+{% block title %} Contact {% endblock %}
+
+{% block page_title %} Contact Page {% endblock %}
+
+{% block content %}
+
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-12">
+          <h1>Update Your Contact</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Update Form</h3>
+                    </div>
+                    <!-- /.card-header -->
+
+                    <!-- form start -->
+                    <form role="form" action="{% url 'contact' %}" method="post">{% csrf_token %}
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="{{contact.email}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="email2">Email address 2</label>
+                                <input type="email" class="form-control" id="email2" placeholder="Email 2" name="email2" value="{{contact.email2}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Location" name="location" value="{{contact.location}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="location2">Location 2</label>
+                                <input type="text" class="form-control" id="location2" placeholder="Location 2" name="location2" value="{{contact.location2}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="cell_phone">Cell Number</label>
+                                <input type="text" class="form-control" id="cell_phone" placeholder="Phone" name="cell_phone" value="{{contact.phone}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="cell_phone2">Cell Number 2</label>
+                                <input type="text" class="form-control" id="cell_phone2" placeholder="Phone 2" name="cell_phone2" value="{{contact.phone2}}">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                </div>
+                                {% if messages %}
+                                    <div class="col-12 mt-3">
+                                        {% for message in messages %}
+                                            {% if message.tags == 'error' %}
+                                                <div class="alert alert-danger">
+                                                    {{message}}
+                                                </div>
+                                            {% else %}
+                                                <div class="alert alert-success">
+                                                    {{message}}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!--/. card footer  -->
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+     <!-- container-fluid -->
+</section>
+<!-- section end -->
+{% endblock content %}

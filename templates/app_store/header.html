@@ -1,0 +1,81 @@
+{% load static %}
+<!-- Start Header Area -->
+<header class="header navbar-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="nav-inner">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{% url 'store_home' %}">
+                            HoyeensCare
+                            <!-- <img src="{% static 'assets/images/normal/logo1.png' %}" alt="Logo"> -->
+                        </a>
+                        <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    {% url 'store_home' as store_home %}
+                                    <a class="dd-menu collapsed {% if request.path == store_home %} active {% endif %}" href="{% url 'store_home' %}"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation" href="{% url 'store_home' %}"> Home
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                  {% url 'contact_us' as contact_us %}
+                                    <a class="dd-menu collapsed {% if request.path == contact_us %} active {% endif %}" href="{% url 'contact_us' %}"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation" href="{% url 'contact_us' %}">Contact
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                  {% url 'about_us' as about_us %}
+                                    <a class="dd-menu collapsed {% if request.path == about_us %} active {% endif %}" href="{% url 'about_us' %}"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation" href="{% url 'about_us' %}"> About
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                  {% url 'gallery' as gallery %}
+                                    <a class="dd-menu collapsed {% if request.path == gallery %} active {% endif %}" href="{% url 'gallery' %}"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation" href="{% url 'gallery' %}"> Gallery
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                  {% url 'blog' as blog %}
+                                  {% url 'faq' as faq %}
+                                    <a class="dd-menu collapsed {% if request.path == blog %} active {% endif %} {% if request.path == faq %} active {% endif %}" href="javascript:void(0)"
+                                      data-bs-toggle="collapse" data-bs-target="#submenu-list4"
+                                      aria-controls="navbarSupportedContent" aria-expanded="false"
+                                      aria-label="Toggle navigation">Blog</a>
+                                    <ul class="sub-menu collapse" id="submenu-list4">
+                                      <li class="nav-item {% if request.path == blog %} active {% endif %}"><a href="{% url 'blog' %}">News</a></li>
+                                      <li class="nav-item {% if request.path == faq %} active {% endif %}"><a href="{% url 'faq' %}">FAQs</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- navbar collapse -->
+                        <div class="button header-button">
+                            <a href="{% url 'login' %}" class="btn main-btn btn-inline">Admin</a>
+                        </div>
+                    </nav>
+                    <!-- navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</header>
+<!-- End Header Area -->

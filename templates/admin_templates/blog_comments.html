@@ -1,0 +1,52 @@
+{% extends 'admin_templates/base.html' %}
+
+{% block title %} Comments {% endblock %}
+
+{% block page_title %} Blog Comments {% endblock %}
+
+{% block content %}
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card card-solid">
+      <div class="card-body pb-0">
+        <div class="row d-flex align-items-stretch">
+          {% for comment in comments %}
+          <div class="col-12">
+            <div class="card bg-light">
+              <div class="card-header text-primary border-bottom-0">
+                 Comment on {{comment.blog_id.title}}
+                <hr />
+                <span class="h4 text-muted"></span>
+              </div>
+              <div class="card-body pt-0">
+                <div class="row">
+                  <div class="col-7">
+                    <p class="text-muted text-sm">
+                      {{comment.comment}} - Anonymous
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <nav aria-label="Contacts Page Navigation">
+          <ul class="pagination justify-content-center m-0">
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+
+</section>
+  <!-- /.content -->
+{% endblock content %}

@@ -1,0 +1,105 @@
+{% load static %}
+<html class="no-js" lang="en">
+
+<!-- Mirrored from preview.gridtemplate.com/themes/classipoint/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Aug 2022 01:03:01 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="Bootstrap, Consulting Template, Landing page, Template, Registration, Landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="GridTemplate">
+
+    <!--====== Title ======-->
+    <title>HoyeensCare | {% block title %} {% endblock %}</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'assets/images/normal/favicon.svg' %}" type="image/svg">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!--====== flaticon Icons css ======-->
+    <link rel="stylesheet" href="{% static 'assets/fonts/flaticon.css' %}">
+
+    <!--====== animate CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/pricing-tab.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!--====== nice-select CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div id="inner-preloader">
+              <div id="shadow"></div>
+              <div id="box"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'app_store/header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+    
+    {% include 'app_store/footer.html' %}
+
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"><i class="flaticon-curve-thin-up-arrow"></i></a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+
+    <!--====== jquery js ======-->
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightcase.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="assets/js/ajax-contact.js' %}"></script>
+
+    <!--====== pricing-tab js ======-->
+    <script src="{% static 'assets/js/pricing-tab.js' %}"></script>
+
+    <!--====== typed js ======-->
+    <script src="{% static 'assets/js/typed.js' %}"></script>
+    <!--====== Slick js ======-->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+    <!--====== jquery.nice-select.min js ======-->
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/fastclick.js' %}"></script>
+    <!--====== wow.min js ======-->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+    <!--====== Main js ======-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script type="text/javascript">
+
+   // counterUp
+      $('.counter').counterUp({
+          delay: 100,
+          time: 9000
+      });
+    </script>
+
+</body>
+</html>
